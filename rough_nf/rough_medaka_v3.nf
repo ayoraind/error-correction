@@ -87,6 +87,8 @@ process MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES {
     
     mv consensus.fasta ${prefix}.fasta
     
+    sed -i "s/^>/>${prefix}_/g" ${prefix}.fasta
+    
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         medaka: \$( medaka --version 2>&1 | sed 's/medaka //g' )
@@ -120,6 +122,8 @@ process MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES {
     medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r941_min_hac_g507 -o .
     
     mv consensus.fasta ${prefix}.fasta
+    
+    sed -i "s/^>/>${prefix}_/g" ${prefix}.fasta
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
