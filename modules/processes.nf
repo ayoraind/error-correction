@@ -5,7 +5,8 @@ process MEDAKA_FIRST_ITERATION {
     
     // publishDir "${params.output_dir}", mode:'copy'
     
-    conda '../medaka_env.yml'
+    conda '/MIGE/01_DATA/07_TOOLS_AND_SOFTWARE/nextflow_pipelines/error-correction/medaka_env.yml'
+    // when used outside the TAPIR network, simply edit the code and use conda '../medaka_env.yml)'
     
     input:
     tuple val(meta), path(reads), path(assembly)
@@ -41,7 +42,7 @@ process MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES {
     errorStrategy 'ignore'
     
     
-    conda '../medaka_env.yml'
+    conda '/MIGE/01_DATA/07_TOOLS_AND_SOFTWARE/nextflow_pipelines/error-correction/medaka_env.yml'
     
     input:
     tuple val(meta), path(reads), path(assembly)
@@ -78,7 +79,7 @@ process MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES {
     errorStrategy 'ignore'
     
     
-    conda './medaka_env.yml'
+    conda '/MIGE/01_DATA/07_TOOLS_AND_SOFTWARE/nextflow_pipelines/error-correction/medaka_env.yml'
     
     input:
     tuple val(meta), path(reads), path(assembly)
