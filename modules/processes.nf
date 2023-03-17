@@ -63,7 +63,6 @@ process MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES {
     
     mv consensus.fasta ${prefix}.fasta
     
-    sed -i "s/^>/>${prefix}_/g" ${prefix}.fasta
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
@@ -99,7 +98,6 @@ process MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES {
     
     mv consensus.fasta ${prefix}.fasta
     
-    sed -i "s/^>/>${prefix}_/g" ${prefix}.fasta
     
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
