@@ -7,7 +7,7 @@ def help_message() {
         Mandatory arguments:
          --reads                        Query fastq.gz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
          --output_dir                   Output directory to place final combined kraken output (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
-         --assemblies	                Query fasta file(s). Should be assemblies derived from Flye or Strainberry (e.g., "/MIGE/01_DATA/03_ASSEMBLY/*_FLYE/*.fasta")
+         --assemblies	                Query fasta file(s). Should be assemblies derived from Flye or Strainberry (e.g., "/MIGE/01_DATA/03_ASSEMBLY/*_FLYE/*.fasta", /MIGE/01_DATA/03_ASSEMBLY/*_FLYE_SBERRY/*.fasta)
 
         Optional arguments:
 	 --sberry			For error-correction of strain-resolved (from Strainberry) assemblies (Default: False). If true, simply supply --sberry as part of the arguments

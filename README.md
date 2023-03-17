@@ -11,7 +11,7 @@
 
         Mandatory arguments:
          --reads                        Query fastq.gz file of sequences you wish to supply as input (e.g., "/MIGE/01_DATA/01_FASTQ/T055-8-*.fastq.gz")
-	 --assemblies			Query fasta file(s). Should be assemblies derived from Flye or Strainberry (e.g., /MIGE/01_DATA/03_ASSEMBLY/*_FLYE/*.fasta).
+	 --assemblies			Query fasta file(s). Should be assemblies derived from Flye or Strainberry (e.g., /MIGE/01_DATA/03_ASSEMBLY/*_FLYE/*.fasta or /MIGE/01_DATA/03_ASSEMBLY/*_FLYE_SBERRY/*.fasta).
          --output_dir                   Output directory (e.g., "/MIGE/01_DATA/03_ASSEMBLY")
          
         Optional arguments:
