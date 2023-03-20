@@ -55,3 +55,12 @@ workflow  {
          // the short way instead of the 'if'  statementwould have been the code below. However, I didn't test this
          // (params.sberry ? MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES(joined_final_ch) : MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES(joined_final_ch) )
 }
+
+
+workflow.onComplete {
+    complete_message(final_params, workflow, version)
+}
+
+workflow.onError {
+    error_message(workflow)
+}
