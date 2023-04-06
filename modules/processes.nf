@@ -1,6 +1,6 @@
 process MEDAKA_FIRST_ITERATION {
     tag "error correction of $meta assemblies"
-    
+    memory { 4.GB * task.attempt }
     errorStrategy { task.attempt <= 5 ? "retry" : "finish" }
     maxRetries 5
     
@@ -35,7 +35,7 @@ process MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES {
     tag "error correction of $meta assemblies"
     
     publishDir "${params.output_dir}/${meta}_FLYE_MEDAKA", mode:'copy'
-    
+    memory { 4.GB * task.attempt }
     errorStrategy { task.attempt <= 5 ? "retry" : "finish" }
     maxRetries 5
     
@@ -71,7 +71,7 @@ process MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES {
     tag "error correction of $meta assemblies"
     
     publishDir "${params.output_dir}/${meta}_FLYE_SBERRY_MEDAKA", mode:'copy'
-    
+    memory { 4.GB * task.attempt }
     errorStrategy { task.attempt <= 5 ? "retry" : "finish" }
     maxRetries 5
     
