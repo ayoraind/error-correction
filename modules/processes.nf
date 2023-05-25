@@ -19,7 +19,7 @@ process MEDAKA_FIRST_ITERATION {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta}"
     """
-    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r941_min_hac_g507 -o .
+    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r104_e81_hac_g5015 -o .
     
     mv consensus.fasta ${prefix}.fasta
     
@@ -55,7 +55,7 @@ process MEDAKA_SECOND_ITERATION_FOR_FLYE_ASSEMBLIES {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta}"
     """
-    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r941_min_hac_g507 -o .
+    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r104_e81_hac_g5015 -o .
     
     mv consensus.fasta ${prefix}.fasta
     
@@ -90,7 +90,7 @@ process MEDAKA_SECOND_ITERATION_FOR_SBERRY_ASSEMBLIES {
     def args = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta}"
     """
-    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r941_min_hac_g507 -o .
+    medaka_consensus -t $task.cpus $args -i $reads -d $assembly -m r104_e81_hac_g5015 -o .
     
     mv consensus.fasta ${prefix}.fasta
     
